@@ -1,0 +1,46 @@
+# Core API
+fastapi==0.110.0
+uvicorn==0.29.0
+python-dotenv
+python-multipart
+
+# LangChain + LangGraph
+langchain>=0.2.0
+langchain-openai>=0.1.5
+langchainhub==0.1.14
+langgraph-prebuilt>=0.2.2
+langgraph-checkpoint>=2.0.26
+langgraph # Or latest stable version
+langchain-core>=0.3.22  # Required for LangGraph compatibility
+langchain-huggingface
+langchain-chroma
+langchain-ollama
+
+# Vector Store
+chromadb==0.4.22
+
+# LLMs
+ollama  # Installable pip package for Ollama interaction
+
+# Knowledge Graph
+neo4j==5.19.0
+
+# Document Parsing
+unstructured==0.13.3
+pypdf
+python-docx
+PyMuPDF
+
+# Embeddings
+sentence-transformers
+
+# Evaluation
+bert-score
+nltk
+
+# Utilities
+pandas
+numpy
+tqdm
+pdfplumber
+pinecone
