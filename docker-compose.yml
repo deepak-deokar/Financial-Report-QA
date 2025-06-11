@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - NEO4J_URI=your-neo4j-uri
+      - NEO4J_USER=your-username
+      - NEO4J_PASSWORD=your-password
+      - PINECONE_API_KEY=your-pinecone-key
+      - PINECONE_INDEX_NAME=your-index
+    depends_on: []
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
