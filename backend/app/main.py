@@ -28,4 +28,5 @@ app.include_router(router)
 # --- Root endpoint ---
 @app.get("/")
 def root():
+    print("[Startup] FastAPI app has fully started 🚀")
     return {"message": "Financial QA & Insights API is running 🚀"}

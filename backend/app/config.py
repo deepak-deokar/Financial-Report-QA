@@ -34,4 +34,4 @@ TATQA_FILE = "../datasets/tatqa/tatqa_dataset_train.json"
 PINECONE_API_KEY = "pcsk_4oiz17_ScaR4XUjUdPzLGGe8tgFCqiwDTygGssCF4Gm1iaXU42hYid8dwtvQyiM8QfFqFt"  # Replace this
 PINECONE_ENVIRONMENT = "us-east-1"  # From screenshot
 PINECONE_INDEX_NAME = "financial-qa-index"
-PINECONE_DIMENSION = 384
+PINECONE_DIMENSION = 768

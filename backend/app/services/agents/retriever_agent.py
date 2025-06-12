@@ -9,7 +9,11 @@ def retrieve_relevant_docs(messages: list, vector_store, graph_nodes):
     query = messages[-1].content
 
     retriever = vector_store.as_retriever(search_kwargs={"k": 5})
-    docs = retriever.get_relevant_documents(query)
+    try:
+        docs = retriever.get_relevant_documents(query)
+    except Exception as e:
+        print(f"[Retriever] Error during retrieval: {e}")
+    docs = []
 
     kg_context = " ".join(graph_nodes)
     combined_context = "\n\n".join([doc.page_content for doc in docs]) + "\n\n" + kg_context

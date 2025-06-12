@@ -44,3 +44,6 @@ numpy
 tqdm
 pdfplumber
 pinecone
+
+
+faiss-cpu
